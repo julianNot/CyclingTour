@@ -22,9 +22,32 @@ public class Cyclist {
         this.totalTime = totalTime;
     }
 
-
     public int getAge() {
         return LocalDate.now().getYear() - brithdate.getYear();
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getFirtslastName() {
+        return firtslastName;
+    }
+
+    public String getSecondlastName() {
+        return secondlastName;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public Team getTeam() {
+        return team;
+    }
+
+    public Time getTotalTime() {
+        return totalTime;
     }
 
     public static void main(String[] args) {

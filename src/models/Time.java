@@ -8,4 +8,8 @@ public class Time {
     public Time(LocalTime time) {
         this.time = time;
     }
+
+    public LocalTime getTime() {
+        return time;
+    }
 }
