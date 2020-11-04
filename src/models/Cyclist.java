@@ -5,17 +5,17 @@ import java.time.LocalTime;
 
 public class Cyclist {
     private String name;
-    private String firtslastName;
-    private String secondlastName;
+    private String firtsLastName;
+    private String secondLastName;
     private LocalDate brithdate;
     private char gender;
     private Team team;
     private Time totalTime;
 
-    public Cyclist(String name, String firtslastName, String secondlastName, LocalDate brithdate, char gender, Team team, Time totalTime) {
+    public Cyclist(String name, String firtsLastName, String secondLastName, LocalDate brithdate, char gender, Team team, Time totalTime) {
         this.name = name;
-        this.firtslastName = firtslastName;
-        this.secondlastName = secondlastName;
+        this.firtsLastName = firtsLastName;
+        this.secondLastName = secondLastName;
         this.brithdate = brithdate;
         this.gender = gender;
         this.team = team;
@@ -30,12 +30,12 @@ public class Cyclist {
         return name;
     }
 
-    public String getFirtslastName() {
-        return firtslastName;
+    public String getFirtsLastName() {
+        return firtsLastName;
     }
 
     public String getSecondlastName() {
-        return secondlastName;
+        return secondLastName;
     }
 
     public char getGender() {
