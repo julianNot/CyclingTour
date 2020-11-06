@@ -19,4 +19,9 @@ public class Dorsal {
     public int getNumberDorsal() {
         return numberDorsal;
     }
+
+    public Object[] toObjectVector() {
+        return new Object[] {getNumberDorsal(),cyclist.getTotalTime(),cyclist.getName(), cyclist.getFirstLastName(),
+                cyclist.getSecondLastName(), cyclist.getAge(), cyclist.getTeam()};
+    }
 }

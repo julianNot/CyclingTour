@@ -50,6 +50,8 @@ public class Cyclist {
         return totalTime;
     }
 
+
+
     public static void main(String[] args) {
         Cyclist cyclist = new Cyclist("julian", "Ardila", "Arguello", LocalDate.of(2000, 8, 07), Gender.M, Team.INEOS, LocalTime.of(2,24,15));
         System.out.println(cyclist.getAge());
