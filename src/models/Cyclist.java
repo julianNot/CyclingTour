@@ -10,9 +10,9 @@ public class Cyclist {
     private LocalDate birthdate;
     private Gender gender;
     private Team team;
-    private Time totalTime;
+    private LocalTime totalTime;
 
-    public Cyclist(String name, String firstLastName, String secondLastName, LocalDate birthdate, Gender gender, Team team, Time totalTime) {
+    public Cyclist(String name, String firstLastName, String secondLastName, LocalDate birthdate, Gender gender, Team team, LocalTime totalTime) {
         this.name = name;
         this.firstLastName = firstLastName;
         this.secondLastName = secondLastName;
@@ -34,7 +34,7 @@ public class Cyclist {
         return firstLastName;
     }
 
-    public String getSecondlastName() {
+    public String getSecondLastName() {
         return secondLastName;
     }
 
@@ -46,12 +46,12 @@ public class Cyclist {
         return team;
     }
 
-    public Time getTotalTime() {
+    public LocalTime getTotalTime() {
         return totalTime;
     }
 
     public static void main(String[] args) {
-        Cyclist cyclist = new Cyclist("julian", "Ardila", "Arguello", LocalDate.of(2000, 8, 07), Gender.M, Team.INEOS, new Time(LocalTime.of(2,24,15)));
+        Cyclist cyclist = new Cyclist("julian", "Ardila", "Arguello", LocalDate.of(2000, 8, 07), Gender.M, Team.INEOS, LocalTime.of(2,24,15));
         System.out.println(cyclist.getAge());
     }
 }
