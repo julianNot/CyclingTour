@@ -29,6 +29,9 @@ public class Presenter {
             case View.RUNNER_BEST_TIME:
                 getBestRunner();
                 break;
+            case View.ADD_CYCLIST:
+
+                break;
             case View.EXIT:
                 return;
         }
@@ -51,6 +54,10 @@ public class Presenter {
         console.showBestRunner(dorsal);
     }
 
+    public void addCyclistForList(){
+        //manager.
+    }
+
 
     public void createUsers(){
         manager.addDorsals(
@@ -59,7 +66,8 @@ public class Presenter {
                 new Dorsal(new Cyclist("Camilo", "Abella", "Araque", LocalDate.of(1996, 3, 2), Gender.M, Team.EMIRATES, LocalTime.of(1, 45, 13))),
                 new Dorsal(new Cyclist("Robert", "Musk", "Rhoads", LocalDate.of(1995, 5, 1), Gender.M, Team.DECEUNINCK, LocalTime.of(3, 50, 23))),
                 new Dorsal(new Cyclist("Rubiela", "Cristancho", "Carapaz", LocalDate.of(2003, 6, 14), Gender.F, Team.ASTANA, LocalTime.of(4, 27, 10))),
-                new Dorsal(new Cyclist("Matias", "Rupestre", "Chicamocha", LocalDate.of(2004, 02, 28), Gender.M, Team.BORA, LocalTime.of(2, 31, 05)))
+                new Dorsal(new Cyclist("Matias", "Rupestre", "Chicamocha", LocalDate.of(2004, 02, 28), Gender.M, Team.BORA, LocalTime.of(2, 31, 05))),
+                new Dorsal(new Cyclist("Isabella","Perez","Arguello", LocalDate.of(2003,10,05),Gender.F, Team.LOTTO, LocalTime.of(1,30,25)))
         });
         manager.filtersByAgeAndLetters();
         manager.orderByLessTime();

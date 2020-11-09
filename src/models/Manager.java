@@ -16,7 +16,6 @@ public class Manager {
     private ArrayList<Dorsal> runners;
 
     public Manager() {
-        this.dorsals = dorsals;
         runners = new ArrayList<>();
     }
 
@@ -89,6 +88,10 @@ public class Manager {
             }
         }
         return null;
+    }
+
+    public void add(Dorsal dorsal){
+        
     }
 
     public  Object[][] toMatrixVec(){

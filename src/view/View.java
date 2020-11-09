@@ -3,8 +3,8 @@ package view;
 import models.Cyclist;
 import models.Dorsal;
 import models.Gender;
-import org.omg.CORBA.PUBLIC_MEMBER;
-
+import models.Team;
+import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Scanner;
 
@@ -14,6 +14,7 @@ public class View {
     public final static int BEST_TIME_TABLE = 1;
     public final static int AVERAGE_MALE_AND_fEMALE = 2;
     public final static int RUNNER_BEST_TIME = 3;
+    public final static int ADD_CYCLIST = 4;
     public final static int EXIT = 0;
 
     public final static String DORSAL_NUMBER = "N° Dorsal";
@@ -77,4 +78,33 @@ public class View {
             System.err.println(ERROR_INSUFICENT);
     }
 
+    public String nameCyclist(){
+        return scanner.nextLine();
+    }
+
+    public String getFirstLastName(){
+        return scanner.nextLine();
+    }
+
+    public String getSecondName(){
+        return scanner.nextLine();
+    }
+
+    public LocalDate getBirthdate(){
+        return LocalDate.of(Integer.parseInt(scanner.next()), Integer.parseInt(scanner.next()),Integer.parseInt(scanner.next()));
+    }
+
+    public Gender getGender(){
+        String gender = scanner.nextLine().toUpperCase().trim();
+        return Gender.valueOf(gender);
+    }
+
+    public Team getTeam(){
+        String team = scanner.nextLine().toUpperCase().trim();
+        return models.Team.valueOf(team);
+    }
+
+    public LocalTime getTotalTime(){
+        return LocalTime.of(Integer.parseInt(scanner.next()),Integer.parseInt(scanner.next()));
+    }
 }
