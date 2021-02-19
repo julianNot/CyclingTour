@@ -42,8 +42,8 @@ public class View {
     }
 
     public int showMenu(){
-        System.out.println("TOUR");
-        System.out.println("1. Tabla Mejor tiempo Masculino \n 2. Promedios Masculino y Femeninos \n 3. Corredora con mejor tiempo \n 0. Salir ");
+        System.out.println("TOUR UPTC");
+        System.out.println("1. Tabla Mejor tiempo Masculino \n 2. Promedios Masculino y Femeninos \n 3. Corredora con mejor tiempo \n 4. Agregar corredor \n 0. Salir ");
         return Integer.parseInt(scanner.nextLine());
     }
 
@@ -79,32 +79,48 @@ public class View {
     }
 
     public String nameCyclist(){
+        System.out.println("Ingrese Nombre:");
         return scanner.nextLine();
     }
 
     public String getFirstLastName(){
+        System.out.println("Ingrese Apellido");
         return scanner.nextLine();
     }
 
     public String getSecondName(){
+        System.out.println("Ingrese segundo Apellido");
         return scanner.nextLine();
     }
 
     public LocalDate getBirthdate(){
-        return LocalDate.of(Integer.parseInt(scanner.next()), Integer.parseInt(scanner.next()),Integer.parseInt(scanner.next()));
+        System.out.println("Ingrese fecha de nacimiento");
+        System.out.println("Año \n Mes \n Dia");
+        int year = Integer.parseInt(scanner.nextLine());
+        int month = Integer.parseInt(scanner.nextLine());
+        int day = Integer.parseInt(scanner.nextLine());
+        return LocalDate.of(year,month,day);
     }
 
     public Gender getGender(){
+        System.out.println("Ingrese sexo M o F");
         String gender = scanner.nextLine().toUpperCase().trim();
         return Gender.valueOf(gender);
     }
 
     public Team getTeam(){
+        System.out.println("Ingrese Nombre del Equipo");
+        System.out.println("ASTANA, BORA, DECEUNINCK, EF, LOTTO, SCOTT, MOVISTAR, MACLAREN, INEOS, EMIRATES");
         String team = scanner.nextLine().toUpperCase().trim();
         return models.Team.valueOf(team);
     }
 
     public LocalTime getTotalTime(){
-        return LocalTime.of(Integer.parseInt(scanner.next()),Integer.parseInt(scanner.next()));
+        System.out.println("Ingrese Tiempo total de recorrido");
+        System.out.println("Hora \n Minutos  \n Segundos");
+        int hour = Integer.parseInt(scanner.nextLine());
+        int minutes = Integer.parseInt(scanner.nextLine());
+        int seconds = Integer.parseInt(scanner.nextLine());
+        return LocalTime.of(hour, minutes, seconds);
     }
 }

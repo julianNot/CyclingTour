@@ -20,17 +20,15 @@ public class Presenter {
         switch (option){
             case View.BEST_TIME_TABLE:
                 getTableOfDates();
-                //
                 break;
             case View.AVERAGE_MALE_AND_fEMALE:
                 getAverages();
-                //
                 break;
             case View.RUNNER_BEST_TIME:
                 getBestRunner();
                 break;
             case View.ADD_CYCLIST:
-
+                addCyclistForList();
                 break;
             case View.EXIT:
                 return;
@@ -55,7 +53,8 @@ public class Presenter {
     }
 
     public void addCyclistForList(){
-        //manager.
+        manager.add(new Dorsal(new Cyclist(console.nameCyclist(),console.getFirstLastName(),console.getSecondName(),console.getBirthdate(),console.getGender(),console.getTeam(),console.getTotalTime())));
+        manager.orderByLessTime();
     }
 
 
@@ -67,7 +66,16 @@ public class Presenter {
                 new Dorsal(new Cyclist("Robert", "Musk", "Rhoads", LocalDate.of(1995, 5, 1), Gender.M, Team.DECEUNINCK, LocalTime.of(3, 50, 23))),
                 new Dorsal(new Cyclist("Rubiela", "Cristancho", "Carapaz", LocalDate.of(2003, 6, 14), Gender.F, Team.ASTANA, LocalTime.of(4, 27, 10))),
                 new Dorsal(new Cyclist("Matias", "Rupestre", "Chicamocha", LocalDate.of(2004, 02, 28), Gender.M, Team.BORA, LocalTime.of(2, 31, 05))),
-                new Dorsal(new Cyclist("Isabella","Perez","Arguello", LocalDate.of(2003,10,05),Gender.F, Team.LOTTO, LocalTime.of(1,30,25)))
+                new Dorsal(new Cyclist("Isabella","Perez","Arguello", LocalDate.of(2003,10,05),Gender.F, Team.LOTTO, LocalTime.of(1,30,25))),
+                new Dorsal(new Cyclist("Yilver","Mota","Gustamante", LocalDate.of(1995,1,02),Gender.M, Team.MACLAREN, LocalTime.of(2,42,12))),
+                new Dorsal(new Cyclist("Juliana","Calderon","Ramirez", LocalDate.of(2005,11,8),Gender.F, Team.SCOTT, LocalTime.of(1,50,45))),
+                new Dorsal(new Cyclist("Fernando","Silva","Mojica", LocalDate.of(1999,12,12),Gender.M, Team.INEOS, LocalTime.of(3,33,5))),
+                new Dorsal(new Cyclist("Rodrigo","Vasquez","Perez", LocalDate.of(1995,5,21),Gender.M, Team.EF, LocalTime.of(1,23,59))),
+                new Dorsal(new Cyclist("Martin","Gomez","Roldan", LocalDate.of(2003,9,1),Gender.M, Team.INEOS, LocalTime.of(2,32,23))),
+                new Dorsal(new Cyclist("Alexandra","Suaterna","Ardila", LocalDate.of(2000,8,7),Gender.F, Team.DECEUNINCK, LocalTime.of(3,42,13))),
+                new Dorsal(new Cyclist("Mariana","Taborda","Smith", LocalDate.of(2003,4,27),Gender.F, Team.SCOTT, LocalTime.of(4,5,3))),
+                new Dorsal(new Cyclist("Gerardo","Gutierrez","Pinzon", LocalDate.of(1995,1,15),Gender.M, Team.MOVISTAR, LocalTime.of(1,50,33))),
+                new Dorsal(new Cyclist("Jennifer","Gallego","Hernandez", LocalDate.of(1997,6,24),Gender.F, Team.MOVISTAR, LocalTime.of(2,50,53))),
         });
         manager.filtersByAgeAndLetters();
         manager.orderByLessTime();
@@ -78,7 +86,4 @@ public class Presenter {
         presenter.createUsers();
         presenter.showMenu();
     }
-
-
-
 }
