@@ -1,9 +1,10 @@
 package view;
 
-import view.singIn.SingIn;
+import presenter.PresenterApp;
 
 import javax.swing.*;
 import java.awt.*;
+import java.time.LocalTime;
 
 public class JFMainWindow extends JFrame {
 
@@ -12,23 +13,27 @@ public class JFMainWindow extends JFrame {
 
     private JPMainPanel jpMainPanel;
 
-    public JFMainWindow(){
+    public JFMainWindow(PresenterApp presenterApp){
         setSize(SIZE_WIDTH,SIZE_HIGH);
         setLocationRelativeTo(null);
         //setIconImage(new ImageIcon(getClass().getResource(/*ruta imagen*/)).getImage());
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setTitle(ConstantsIU.TITTLE);
         setBackground(Color.RED);
-        initComponents();
+        initComponents(presenterApp);
         setVisible(true);
     }
 
-    public void initComponents(){
-        jpMainPanel = new JPMainPanel();
+    public void initComponents(PresenterApp presenterApp){
+        jpMainPanel = new JPMainPanel(presenterApp);
         this.add(jpMainPanel);
     }
 
-    public static void main(String[] args) {
-        new JFMainWindow();
+    public void showBestTime(LocalTime time){
+        jpMainPanel.showBestTime(time);
+    }
+
+    public void addPanelSignIn(){
+        jpMainPanel.addPanelSignIn();
     }
 }
