@@ -26,6 +26,14 @@ public class Cyclist {
         return LocalDate.now().getYear() - birthdate.getYear();
     }
 
+    /**
+     * prueba
+     * @return tiempo
+     */
+    public LocalTime timeTest(){
+        return LocalTime.now();
+    }
+
     public String getName() {
         return name;
     }

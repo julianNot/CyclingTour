@@ -11,7 +11,7 @@ public class PresenterApp implements ActionListener {
     private JFMainWindow jfMainWindow;
 
     public PresenterApp() {
-        this.jfMainWindow = new JFMainWindow(this)  ;
+        this.jfMainWindow = new JFMainWindow(this);
     }
 
     @Override

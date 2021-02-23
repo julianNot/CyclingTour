@@ -19,7 +19,9 @@ public class JPMenuTour extends JPanel {
     public void addPanelCenter(PresenterApp presenterApp){
         JPanel menuOptions = new JPanel();
         menuOptions.setLayout(new BoxLayout(menuOptions,BoxLayout.X_AXIS));
-
+        /**
+         * Muestra el mejor tiempo
+         */
         JButton bestTime = new JButton(ConstantsIU.MENU_BEST_TIME);
         bestTime.setActionCommand(Commands.C_SHOW_BEST_TIME.toString());
         bestTime.addActionListener(presenterApp);

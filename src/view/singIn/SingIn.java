@@ -18,6 +18,7 @@ public class SingIn extends JPanel {
         JLabel test = new JLabel("Prueba");
         //this.add(test);
         bestTime = new JLabel("Mejor Tiempo");
+        this.add(bestTime);
     }
 
     public void showBestTime(LocalTime time){
@@ -44,7 +45,7 @@ public class SingIn extends JPanel {
         jPanel.add(lastName2);
         jPanel.add(lastNameText2);
 
-        this.add(jPanel);
-        this.add(singIn);
+        //this.add(jPanel);
+        //this.add(singIn);
     }
 }
