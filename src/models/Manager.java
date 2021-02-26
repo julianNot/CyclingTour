@@ -92,6 +92,10 @@ public class Manager {
         }
     }
 
+    public ArrayList<Dorsal> getRunners() {
+        return runners;
+    }
+
     public  Object[][] toMatrixVec(){
         Object[][] dataMatrix = null;
         int sizeColumns = runners.get(0).toObjectVector().length;

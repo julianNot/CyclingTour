@@ -24,6 +24,14 @@ public class JFMainWindow extends JFrame {
         setVisible(true);
     }
 
+    public void bestTimeRunner(String name, LocalTime time){
+        jpMainPanel.bestTimeRunner(name,time);
+    }
+
+    public void averageMale(LocalTime timeMale, LocalTime timeFemale){
+        jpMainPanel.averageMale(timeMale, timeFemale);
+    }
+
     public void initComponents(PresenterApp presenterApp){
         jpMainPanel = new JPMainPanel(presenterApp);
         this.add(jpMainPanel);

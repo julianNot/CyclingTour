@@ -1,4 +1,4 @@
-package view.singIn;
+package view.header;
 
 import javax.swing.*;
 import java.awt.*;
