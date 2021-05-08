@@ -21,6 +21,11 @@ public class Manager {
         this.dorsals = dorsals;
     }
 
+    public void addOnlyDorsal(Dorsal dorsal){
+        dorsal.setNumberDorsal(runners.size()+1);
+        runners.add(dorsal);
+    }
+
     public void filtersByAgeAndLetters() {
         for (int i = 0; i < dorsals.length; i++) {
             int tempAge = dorsals[i].getCyclist().getAge();
@@ -95,6 +100,15 @@ public class Manager {
     public ArrayList<Dorsal> getRunners() {
         return runners;
     }
+
+    public Dorsal getCyclist(int index){
+        return runners.get(index);
+    }
+
+    public int sizeRunnersList(){
+        return runners.size();
+    }
+
 
     public  Object[][] toMatrixVec(){
         Object[][] dataMatrix = null;

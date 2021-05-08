@@ -1,6 +1,8 @@
 package tests;
 
 import models.*;
+import controller.PresenterApp;
+import view.JdSingIn;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -11,10 +13,14 @@ public class TestManager {
 
     private Manager manager;
     private Scanner scanner;
+    private PresenterApp presenterApp;
+    private JdSingIn jdSingIn;
 
     public TestManager() {
         this.manager = new Manager();
         this.scanner = new Scanner(System.in);
+        this.presenterApp = new PresenterApp();
+
     }
 
     public void addDorsal(){
@@ -36,7 +42,5 @@ public class TestManager {
         }
     }
 
-    public static void main(String[] args) {
-        new TestManager().add();
-    }
+
 }

@@ -20,8 +20,10 @@ public class Dorsal {
         return numberDorsal;
     }
 
+
     public Object[] toObjectVector() {
         return new Object[] {getNumberDorsal(),cyclist.getTotalTime(),cyclist.getName(), cyclist.getFirstLastName(),
-                cyclist.getSecondLastName(), cyclist.getAge(), cyclist.getTeam()};
+                cyclist.getSecondLastName(), cyclist.getAge(), cyclist.getGender(), cyclist.getTeam()};
     }
+
 }

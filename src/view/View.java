@@ -84,7 +84,7 @@ public class View {
     }
 
     public String getFirstLastName(){
-        System.out.println("Ingrese Apellido");
+        System.out.println("Ingrese Apellido:");
         return scanner.nextLine();
     }
 

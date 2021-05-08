@@ -1,19 +1,36 @@
 package models;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
 public class DatasRunners {
+    public static final int MINIMUM_AGE = 15;
+    public static final int MAX_AGE = 40;
+
     private Manager manager;
+
+    private ArrayList<Dorsal> rejected;
 
     public DatasRunners() {
         manager = new Manager();
+        initComponents();
+    }
+
+    public void initComponents() {
         addDorsal();
         manager.generate();
         manager.filtersByAgeAndLetters();
         manager.orderByLessTime();
+        rejected = new ArrayList<>();
     }
+
+    public void orderByLessTime(){
+        manager.orderByLessTime();
+    }
+
 
     public ArrayList<Dorsal> generateDatas(){
         return manager.getRunners();
@@ -26,6 +43,20 @@ public class DatasRunners {
     public Dorsal bestRunner(){
         return manager.bestRunner();
     }
+
+    public void filtersByAgeAndLetters(Dorsal dorsal) {
+        Cyclist temp = dorsal.getCyclist();
+        int tempAge = temp.getAge();
+        if (temp != null){
+            if (tempAge >= MINIMUM_AGE && tempAge <= MAX_AGE &&  temp != null) {
+                manager.add(dorsal);
+            }else {
+                rejected.add(dorsal);
+            }
+        }
+
+    }
+
 
     private void addDorsal() {
         manager.addDorsals(
@@ -46,5 +77,9 @@ public class DatasRunners {
                         new Dorsal(new Cyclist("Gerardo","Gutierrez","Pinzon", LocalDate.of(1995,1,15),Gender.M, Team.MOVISTAR, LocalTime.of(1,50,33))),
                         new Dorsal(new Cyclist("Jennifer","Gallego","Hernandez", LocalDate.of(1997,6,24),Gender.F, Team.MOVISTAR, LocalTime.of(2,50,53))),
                 });
+    }
+
+    public Manager getManager() {
+        return manager;
     }
 }

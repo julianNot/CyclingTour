@@ -1,0 +1,8 @@
+package controller;
+
+import com.sun.deploy.net.MessageHeader;
+
+public enum Commands {
+    C_SHOW_BEST_TIME_RUNNER, C_SHOW_AVERAGES,C_SHOW_BEST_TIME_TABLE, C_SHOW_ADD_CYCLIST, C_SIGN_IN_BUTTON, C_CLOSE_DIALOG, C_REFRESH_TABLE,
+    C_CLEAR_TABLE, C_CHANGE_SPANISH, C_CHANGE_ENGLISH, C_RAID_FILE
+}

@@ -10,6 +10,7 @@ public class Cyclist {
     private LocalDate birthdate;
     private Gender gender;
     private Team team;
+    private String teamString;
     private LocalTime totalTime;
 
     public Cyclist(String name, String firstLastName, String secondLastName, LocalDate birthdate, Gender gender, Team team, LocalTime totalTime) {
@@ -19,6 +20,19 @@ public class Cyclist {
         this.birthdate = birthdate;
         this.gender = gender;
         this.team = team;
+        this.totalTime = totalTime;
+    }
+
+    /**
+     * prueba
+     */
+    public Cyclist(String name, String firstLastName, String secondLastName, LocalDate birthdate, Gender gender, String team, LocalTime totalTime) {
+        this.name = name;
+        this.firstLastName = firstLastName;
+        this.secondLastName = secondLastName;
+        this.birthdate = birthdate;
+        this.gender = gender;
+        this.teamString = team;
         this.totalTime = totalTime;
     }
 
@@ -50,8 +64,12 @@ public class Cyclist {
         return gender;
     }
 
-    public Team getTeam() {
-        return team;
+//    public Team getTeam() {
+//        return team;
+//    }
+
+    public String getTeam() {
+        return team+"";
     }
 
     public LocalTime getTotalTime() {
